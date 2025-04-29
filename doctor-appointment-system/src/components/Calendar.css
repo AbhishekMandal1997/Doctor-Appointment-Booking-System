@@ -1,0 +1,228 @@
+.calendar-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.calendar-container.dark-mode {
+    background: #1a1a1a;
+    color: #fff;
+}
+
+.calendar-header {
+    margin-bottom: 24px;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.calendar-header h2 {
+    font-size: 24px;
+    color: #2c3e50;
+    margin: 0;
+    text-align: center;
+}
+
+.dark-mode .calendar-header h2 {
+    color: #fff;
+}
+
+.month-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.month-navigation button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.month-navigation button:hover {
+    background: #2980b9;
+}
+
+.month-navigation h3 {
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.dark-mode .month-navigation h3 {
+    color: #fff;
+}
+
+.weekdays-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.weekday {
+    text-align: center;
+    font-weight: 600;
+    color: #7f8c8d;
+    padding: 10px;
+}
+
+.dark-mode .weekday {
+    color: #bdc3c7;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-cell {
+    min-height: 120px;
+    border: 1px solid #e0e0e0;
+    padding: 8px;
+    position: relative;
+    background: #f8f9fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.dark-mode .calendar-cell {
+    background: #2d2d2d;
+    border-color: #404040;
+}
+
+.calendar-cell:hover {
+    background: #e3f2fd;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode .calendar-cell:hover {
+    background: #3d3d3d;
+}
+
+.calendar-cell.empty {
+    background: #f5f5f5;
+    cursor: default;
+}
+
+.dark-mode .calendar-cell.empty {
+    background: #2d2d2d;
+}
+
+.calendar-cell.empty:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.date-number {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.dark-mode .date-number {
+    color: #fff;
+}
+
+.appointments-preview {
+    margin-top: 30px;
+    font-size: 0.85rem;
+}
+
+.appointment {
+    background: #3498db;
+    color: white;
+    padding: 4px 8px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    transition: background 0.2s;
+}
+
+.appointment:hover {
+    background: #2980b9;
+}
+
+/* Dark mode styles for body */
+body.dark-mode {
+    background: #121212;
+    color: #fff;
+}
+
+/* Dark mode styles for modals */
+.dark-mode .modal {
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.dark-mode .modal-header h3 {
+    color: #fff;
+}
+
+.dark-mode .modal-date {
+    color: #bdc3c7;
+}
+
+.dark-mode .form-group label {
+    color: #fff;
+}
+
+.dark-mode .form-group input,
+.dark-mode .form-group textarea {
+    background: #3d3d3d;
+    border-color: #404040;
+    color: #fff;
+}
+
+.dark-mode .form-group input:focus,
+.dark-mode .form-group textarea:focus {
+    border-color: #3498db;
+}
+
+/* Dark mode styles for appointment list */
+.dark-mode .appointment-card {
+    background: #3d3d3d;
+}
+
+.dark-mode .appointment-details h4 {
+    color: #fff;
+}
+
+.dark-mode .appointment-details p {
+    color: #bdc3c7;
+}
